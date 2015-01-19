@@ -8,12 +8,15 @@ module.exports = function (content) {
   var query = loaderUtils.parseQuery(this.query);
   if (query.harmony == undefined) { query.harmony = true }
 
+  var that = this;
+
   var replace = function (match, jsx) {
     try {
       var reactCode = reactTools.transform(jsx, { harmony: query.harmony })
     }
     catch (ex) {
-      throw new Error('Problem transforming the following:\n' + jsx + '\n\n' + ex)
+      that.emitError('Problem transforming the following:\n' + jsx + '\n\n' + ex)
+      return match;
     }
     return '(' + reactCode + ')'
   };

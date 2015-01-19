@@ -3,7 +3,8 @@ var path = require('path');
 var jsxLoader = require('../index');
 
 var context = {
-    cacheable: function() {}
+    cacheable: function() {},
+    emitError: function() {}
 }
 
 var files = fs.readdirSync(__dirname)

@@ -1,0 +1,8 @@
+class Test {
+    render() {
+        return React.jsx(/*
+            <div>
+            <div>
+        */)
+    }
+}
