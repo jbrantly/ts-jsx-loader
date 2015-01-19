@@ -1,0 +1,9 @@
+class Test {
+    render() {
+        return React.jsx(/*
+            <div>
+                <span>Testing</span>
+            </div>
+        */)
+    }
+}

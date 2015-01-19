@@ -1,0 +1,33 @@
+{
+  "name": "selective-jsx-loader",
+  "version": "0.1.0",
+  "description": "Webpack loader for selectively transforming JSX based on special syntax. Most useful for embedding JSX in TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --reporter spec test/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbrantly/selective-jsx-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "jsx",
+    "typescript",
+    "ts"
+  ],
+  "author": "James Brantly <james@jbrantly.com> (http://www.jbrantly.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbrantly/selective-jsx-loader/issues"
+  },
+  "homepage": "https://github.com/jbrantly/selective-jsx-loader",
+  "dependencies": {
+    "loader-utils": "^0.2.6",
+    "react-tools": "^0.12.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
+}

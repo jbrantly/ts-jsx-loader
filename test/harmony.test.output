@@ -1,0 +1,9 @@
+class Test {
+    render() {
+        return (
+            React.createElement("div", null, 
+                React.createElement("span", {onClick: (function()  {return console.log('clicked');})})
+            )
+        )
+    }
+}
