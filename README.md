@@ -30,8 +30,8 @@ module.exports = {
 
 ts-jsx-loader defines a fake API on React called React.jsx(). You should
 reference the included `react-jsx.d.ts` definition file for IDE support. This
-API accepts either a string or nothing. You can then create JSX as a string
-or within multiline comments.
+API accepts either a string or nothing. You can then create JSX as a 
+template string or within multiline comments.
 
 ```
 ///<reference path="path/to/react-jsx.d.ts"/>
@@ -46,7 +46,7 @@ React.render(React.jsx(/*
     </div>
 */), document.body)
 
-// or if you're using TypeScript 1.4 or above
+// or if you're using TypeScript 1.4 or above with template strings
 
 React.render(React.jsx(`
     <div>
