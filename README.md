@@ -1,7 +1,7 @@
 # ts-jsx-loader
 
-Webpack loader for selectively transforming JSX based on special syntax. Meant
-to be used with a TypeScript loader to allow using JSX with TypeScript.
+Webpack loader for transforming JSX based on special syntax. Meant to be used
+with a [TypeScript loader](https://github.com/jbrantly/ts-loader) to allow using JSX with TypeScript.
 
 ## Installation
 
