@@ -1,0 +1,11 @@
+class Test {
+    render() {
+        return (
+            /*jsx*/
+            <div>
+                <span>Testing</span>
+            </div>
+            /*jsx*/
+        )
+    }
+}
