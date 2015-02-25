@@ -33,7 +33,7 @@ reference the included `react-jsx.d.ts` definition file for IDE support. This
 API accepts either a string or nothing. You can then create JSX as a 
 template string or within multiline comments.
 
-```
+```javascript
 ///<reference path="path/to/react-jsx.d.ts"/>
 
 import React = require('react');
@@ -53,9 +53,19 @@ React.render(React.jsx(`
         <span>{message}</span>
     </div>
 `), document.body)
+
+// or if you simply want to use JSX without making it valid TypeScript
+
+React.render(
+    /*jsx*/
+    <div>
+        <span>{message}</span>
+    </div>
+    /*jsx*/
+, document.body)
 ```
 
-The loader will find occurrences of React.jsx() and transform them into
+The loader will find occurrences of `React.jsx()` or `/*jsx*/` and transform them into
 React.createElement() calls prior to being passed to the TypeScript
 loader.
 
