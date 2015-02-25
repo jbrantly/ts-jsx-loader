@@ -1,6 +1,6 @@
 {
     "name": "ts-jsx-loader",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Webpack loader for transforming JSX in TypeScript files.",
     "main": "index.js",
     "scripts": {
