@@ -1,8 +1,10 @@
 class Test {
     render() {
+        var subcomponent = (React.createElement("div", null, "Subcomponent"))
         return (
             (
             React.createElement("div", null, 
+                subcomponent, 
                 React.createElement("span", null, "Testing")
             )
             )

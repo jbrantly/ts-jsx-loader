@@ -1,8 +1,10 @@
 class Test {
     render() {
+        var subcomponent = /*jsx*/<div>Subcomponent</div>/*jsx*/
         return (
             /*jsx*/
             <div>
+                {subcomponent}
                 <span>Testing</span>
             </div>
             /*jsx*/
