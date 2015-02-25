@@ -24,4 +24,5 @@ module.exports = function (content) {
   return content
     .replace(/React\.jsx\(`([^`\\]*(\\.[^`\\]*)*)`\)/gm, replace) // using template strings
     .replace(/React\.jsx\(\/\*((.|[\r\n])*?)\*\/\)/gm, replace) // using multiline comments
+    .replace(/\/\*jsx\*\/((.|[\r\n])*?)\/\*jsx\*\//gm, replace); // using jsx comments
 }
