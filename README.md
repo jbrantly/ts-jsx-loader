@@ -17,6 +17,9 @@ configuration will look something like this:
 ```
 module.exports = {
     entry: './app.ts',
+		output: {
+        filename: 'bundle.js'
+		},
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.js', '.ts']
     },
