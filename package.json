@@ -11,7 +11,6 @@
         "url": "https://github.com/jbrantly/ts-jsx-loader.git"
     },
     "keywords": [
-
         "webpack",
         "loader",
         "jsx",
@@ -26,7 +25,7 @@
     "homepage": "https://github.com/jbrantly/ts-jsx-loader",
     "dependencies": {
         "loader-utils": "^0.2.6",
-        "react-tools": "^0.12.2"
+        "react-tools": "^0.13.1"
     },
     "devDependencies": {
         "mocha": "^2.1.0"
