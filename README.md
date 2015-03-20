@@ -32,9 +32,9 @@ module.exports = {
 ```
 
 ts-jsx-loader defines a fake API on React called React.jsx(). You should
-reference the included `react-jsx.d.ts` definition file for IDE support. This
-API accepts either a string or nothing. You can then create JSX as a 
-template string or within multiline comments.
+reference the included `react-jsx.d.ts` or `react-jsx-addons.d.ts`
+definition file for IDE support. This API accepts either a string or nothing.
+You can then create JSX as a template string or within multiline comments.
 
 ```javascript
 ///<reference path="path/to/react-jsx.d.ts"/>
