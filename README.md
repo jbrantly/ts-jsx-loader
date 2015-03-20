@@ -14,12 +14,12 @@ npm install ts-jsx-loader
 The loader chain should go from ts-jsx-loader into a TypeScript loader. Your
 configuration will look something like this:
 
-```
+```javascript
 module.exports = {
     entry: './app.ts',
-		output: {
+    output: {
         filename: 'bundle.js'
-		},
+    },
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.js', '.ts']
     },
@@ -71,6 +71,45 @@ React.render(
 The loader will find occurrences of `React.jsx()` or `/*jsx*/` and transform them into
 React.createElement() calls prior to being passed to the TypeScript
 loader.
+
+## Options
+
+Specify options to the loader via query string:
+
+```javascript
+    ...
+    module: {
+        loaders: [
+            { test: /\.ts$/, loader: 'ts-loader!ts-jsx-loader?target=es3&identifier=react.jsx' }
+        ]
+    }
+    ...
+```
+### harmony *(boolean) (default=true)*
+
+Allows the use of ES6 features within JSX.
+
+- es3
+- **es5 (default)**
+
+### identifier *(string) (default='React.jsx')*
+
+Change the identifier to something other than `React.jsx`. For example, you
+could import React with a lower-case *r* like so:
+
+```javascript
+import react = require('react')
+
+react.jsx(`<div />`)
+```
+
+### target *(string)*
+
+Specify the output target. [See this](http://facebook.github.io/react/blog/2015/03/10/react-v0.13.html#react-tools)
+for more information.
+
+- es3
+- **es5 (default)**
 
 ## License
 
