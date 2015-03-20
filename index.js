@@ -12,6 +12,8 @@ module.exports = function (content) {
     harmony: query.harmony == undefined ? true : query.harmony
   }
   
+  if (query.target) reactToolsOptions.target = query.target;
+  
   var identifier = escapeStringRegexp(query.identifier || "React.jsx");
   
   var that = this;

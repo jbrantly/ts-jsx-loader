@@ -32,6 +32,7 @@ function runTests(tests, query) {
 runTests([
   'comment',
   'error',
+  'es5',
   'harmony',
   'jsx-comment',
   'stringtemplate'
@@ -40,3 +41,7 @@ runTests([
 runTests([
   'identifier'
 ], "?identifier=react.jsx")
+
+runTests([
+  'es3'
+], "?target=es3")
