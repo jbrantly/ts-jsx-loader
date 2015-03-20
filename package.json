@@ -1,33 +1,33 @@
 {
-    "name": "ts-jsx-loader",
-    "version": "0.1.2",
-    "description": "Webpack loader for transforming JSX in TypeScript files.",
-    "main": "index.js",
-    "scripts": {
-        "test": "node ./node_modules/mocha/bin/mocha --reporter spec test/run.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jbrantly/ts-jsx-loader.git"
-    },
-    "keywords": [
-        "webpack",
-        "loader",
-        "jsx",
-        "typescript",
-        "ts"
-    ],
-    "author": "James Brantly <james@jbrantly.com> (http://www.jbrantly.com/)",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/jbrantly/ts-jsx-loader/issues"
-    },
-    "homepage": "https://github.com/jbrantly/ts-jsx-loader",
-    "dependencies": {
-        "loader-utils": "^0.2.6",
-        "react-tools": "^0.13.1"
-    },
-    "devDependencies": {
-        "mocha": "^2.1.0"
-    }
+  "name": "ts-jsx-loader",
+  "version": "0.1.2",
+  "description": "Webpack loader for transforming JSX in TypeScript files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --reporter spec test/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbrantly/ts-jsx-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "jsx",
+    "typescript",
+    "ts"
+  ],
+  "author": "James Brantly <james@jbrantly.com> (http://www.jbrantly.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbrantly/ts-jsx-loader/issues"
+  },
+  "homepage": "https://github.com/jbrantly/ts-jsx-loader",
+  "dependencies": {
+    "loader-utils": "^0.2.6",
+    "react-tools": "^0.13.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
 }
