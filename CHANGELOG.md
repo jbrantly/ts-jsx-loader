@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.2.0
+
+- Update to react-tools v0.13
+- Update definition file to work with React v0.13 definition files from DefinitelyTyped
+- Add support for --target (#4)
+- Add support for --identifier
+
 ## v0.1.2
 
 - Add support for /*jsx*/ syntax (#2)
