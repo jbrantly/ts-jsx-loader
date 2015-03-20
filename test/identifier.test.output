@@ -1,0 +1,19 @@
+class Test {
+    render() {
+        return (
+            React.createElement("div", null, 
+                React.createElement("span", null, "Testing")
+            )
+        )
+    }
+}
+
+class Test2 {
+    render() {
+        return (
+            React.createElement("div", null, 
+                React.createElement("span", null, "Testing")
+            )
+        )
+    }
+}

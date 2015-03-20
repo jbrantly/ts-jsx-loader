@@ -36,3 +36,7 @@ runTests([
   'jsx-comment',
   'stringtemplate'
 ])
+
+runTests([
+  'identifier'
+], "?identifier=react.jsx")

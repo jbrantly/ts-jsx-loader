@@ -1,18 +1,24 @@
 var reactTools = require('react-tools')
 var path = require('path')
 var loaderUtils = require('loader-utils')
+var escapeStringRegexp = require('escape-string-regexp');
 
 module.exports = function (content) {
   this.cacheable()
 
   var query = loaderUtils.parseQuery(this.query);
-  if (query.harmony == undefined) { query.harmony = true }
-
+  
+  var reactToolsOptions = {
+    harmony: query.harmony == undefined ? true : query.harmony
+  }
+  
+  var identifier = escapeStringRegexp(query.identifier || "React.jsx");
+  
   var that = this;
 
   var replace = function (match, jsx) {
     try {
-      var reactCode = reactTools.transform(jsx, { harmony: query.harmony })
+      var reactCode = reactTools.transform(jsx, reactToolsOptions)
     }
     catch (ex) {
       that.emitError('Problem transforming the following:\n' + jsx + '\n\n' + ex)
@@ -22,7 +28,7 @@ module.exports = function (content) {
   };
 
   return content
-    .replace(/React\.jsx\(`([^`\\]*(\\.[^`\\]*)*)`\)/gm, replace) // using template strings
-    .replace(/React\.jsx\(\/\*((.|[\r\n])*?)\*\/\)/gm, replace) // using multiline comments
+    .replace(new RegExp(identifier + '\\(`([^`\\\\]*(\\\\.[^`\\\\]*)*)`\\)', 'gm'), replace) // using template strings
+    .replace(new RegExp(identifier + '\\(\\/\\*((.|[\\r\\n])*?)\\*\\/\\)', 'gm'), replace) // using multiline comments
     .replace(/\/\*jsx\*\/((.|[\r\n])*?)\/\*jsx\*\//gm, replace); // using jsx comments
 }

@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/jbrantly/ts-jsx-loader",
   "dependencies": {
+    "escape-string-regexp": "^1.0.3",
     "loader-utils": "^0.2.6",
     "react-tools": "^0.13.1"
   },
