@@ -1,4 +1,5 @@
 class Test {
     render() {
-        return React.jsxFile('./file.test.input')}
+        return React.jsxFile('./file.test.input')
+    }
 }

@@ -51,7 +51,7 @@ module.exports = function (content) {
       that.emitError('Problem transforming the following: ' + filename + '\n' + jsx + '\n\n' + ex)
       return match;
     }
-    return '(' + reactCode + ')'
+    return '(' + reactCode.replace(/\s+/g, " ") + ')'
   };
   
   return content

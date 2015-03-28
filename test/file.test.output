@@ -1,5 +1,5 @@
 class Test {
     render() {
-        return (React.createElement("div", null, React.createElement("span", null, "Testing file"))
-)}
+        return (React.createElement("div", null, React.createElement("span", null, "Testing file")) )
+    }
 }
