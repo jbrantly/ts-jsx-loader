@@ -66,6 +66,10 @@ React.render(
     </div>
     /*jsx*/
 , document.body)
+
+// or if you want to read JSX from a external file
+
+React.render(React.jsxFile("./mytemplate.html"), document.body)
 ```
 
 The loader will find occurrences of `React.jsx()` or `/*jsx*/` and transform them into

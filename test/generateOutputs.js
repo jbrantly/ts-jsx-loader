@@ -4,7 +4,8 @@ var jsxLoader = require('../index');
 
 var context = {
     cacheable: function() {},
-    emitError: function() {}
+    emitError: function() {},
+    context: __dirname
 }
 
 var files = fs.readdirSync(__dirname)

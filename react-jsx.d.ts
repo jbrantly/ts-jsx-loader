@@ -2,5 +2,6 @@
 
 declare module "react" {
 		function jsx(jsx?: string): ReactElement<any>;
+		function jsxFile(filename: string): ReactElement<any>;
 		function __spread(...args: any[]): any; // for JSX Spread Attributes
 }
