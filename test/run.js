@@ -8,7 +8,8 @@ function runTests(tests, query) {
   var context = {
     cacheable: function() {},
     emitError: function() {},
-    query: query
+    query: query,
+    context: __dirname
   }
   
   tests.forEach(function(f) {
@@ -35,7 +36,8 @@ runTests([
   'es5',
   'harmony',
   'jsx-comment',
-  'stringtemplate'
+  'stringtemplate',
+  'file'
 ])
 
 runTests([

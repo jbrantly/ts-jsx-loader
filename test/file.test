@@ -1,0 +1,4 @@
+class Test {
+    render() {
+        return React.jsxFile('./file.test.input')}
+}
