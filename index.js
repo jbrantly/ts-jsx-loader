@@ -39,6 +39,11 @@ module.exports = function (content) {
       return match;
     }
     
+    // Watch HTML files for changes
+    if (that.addDependency) {
+        that.addDependency(filepath);
+    }
+    
     try {
       var reactCode = reactTools.transform(jsx, reactToolsOptions)
     }
