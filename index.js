@@ -30,7 +30,7 @@ module.exports = function (content) {
   };
 
   return content
-    .replace(new RegExp(identifier + '\\(`([^`\\\\]*(\\\\.[^`\\\\]*)*)`\\)', 'gm'), replace) // using template strings
+    .replace(new RegExp(identifier + '\\(\\s*?`([^`\\\\]*(\\\\.[^`\\\\]*)*)`\\s*?\\)', 'gm'), replace) // using template strings
     .replace(new RegExp(identifier + '\\(\\/\\*((.|[\\r\\n])*?)\\*\\/\\)', 'gm'), replace) // using multiline comments
     .replace(/\/\*jsx\*\/((.|[\r\n])*?)\/\*jsx\*\//gm, replace); // using jsx comments
 }

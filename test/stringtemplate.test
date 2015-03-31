@@ -7,3 +7,25 @@ class Test {
         `)
     }
 }
+
+class Test {
+    render() {
+        return React.jsx(   `
+            <div>
+                <span>Testing</span>
+            </div>
+        `   )
+    }
+}
+
+class Test {
+    render() {
+        return React.jsx(
+        `
+            <div>
+                <span>Testing</span>
+            </div>
+        `
+        )
+    }
+}
