@@ -1,0 +1,20 @@
+class Test {
+    render() {
+        return React.jsx(`
+            <div>
+                <span prop=${this.static}>Testing</span>
+            </div>
+        `);
+    }
+}
+
+class Test {
+    render() {
+        var validString = `This is a valid template string ${this.static}`;
+        return React.jsx(/*
+            <div>
+                <span>Cost: 5${this.static}</span>
+            </div>
+        */);
+    }
+}

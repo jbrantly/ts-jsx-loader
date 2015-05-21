@@ -49,7 +49,13 @@ React.render(React.jsx(/*
     </div>
 */), document.body)
 
-// or if you're using TypeScript 1.4 or above with template strings
+// or if you're using TypeScript 1.4 or above with template strings, with or without embedded expressions
+
+React.render(React.jsx(`
+    <div>
+        <span>${message}</span>
+    </div>
+`), document.body)
 
 React.render(React.jsx(`
     <div>

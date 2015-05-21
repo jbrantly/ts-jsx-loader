@@ -29,8 +29,13 @@ module.exports = function (content) {
     return '(' + reactCode + ')'
   };
 
+  var dollarBraceReplace = function (match, jsx) {
+    jsx = jsx.replace(/\$\{(.*?)\}/gm, "{$1}");
+    return replace(match, jsx);
+  };
+
   return content
-    .replace(new RegExp(identifier + '\\(\\s*?`([^`\\\\]*(\\\\.[^`\\\\]*)*)`\\s*?\\)', 'gm'), replace) // using template strings
+    .replace(new RegExp(identifier + '\\(\\s*?`([^`\\\\]*(\\\\.[^`\\\\]*)*)`\\s*?\\)', 'gm'), dollarBraceReplace) // using template strings
     .replace(new RegExp(identifier + '\\(\\/\\*((.|[\\r\\n])*?)\\*\\/\\)', 'gm'), replace) // using multiline comments
     .replace(/\/\*jsx\*\/((.|[\r\n])*?)\/\*jsx\*\//gm, replace); // using jsx comments
 }

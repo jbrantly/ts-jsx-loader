@@ -35,7 +35,8 @@ runTests([
   'es5',
   'harmony',
   'jsx-comment',
-  'stringtemplate'
+  'stringtemplate',
+  'dollar-brace'
 ])
 
 runTests([
