@@ -2,7 +2,7 @@ class Test {
     render() {
         return (
             React.createElement("div", null, 
-                React.createElement("span", {prop: this.static}, "Testing")
+                React.createElement("span", {prop: this.static}, "More $ $$ signs ", this.static)
             )
         );
     }

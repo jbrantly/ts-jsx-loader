@@ -2,7 +2,7 @@ class Test {
     render() {
         return React.jsx(`
             <div>
-                <span prop=${this.static}>Testing</span>
+                <span prop=${this.static}>More $ $$ signs ${this.static}</span>
             </div>
         `);
     }
