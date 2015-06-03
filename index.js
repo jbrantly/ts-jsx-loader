@@ -30,7 +30,7 @@ module.exports = function (content) {
   };
 
   var dollarBraceReplace = function (match, jsx) {
-    jsx = jsx.replace(/\$\{(.*?)\}/gm, "{$1}");
+    jsx = jsx.replace(/\$\{([^]*?)\}/gm, "{$1}");
     return replace(match, jsx);
   };
 

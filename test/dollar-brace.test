@@ -10,6 +10,16 @@ class Test {
 
 class Test {
     render() {
+        return React.jsx(`
+            <div dangerouslySetInnerHTML=${{
+                __html: this.static
+            }}></div>
+        `);
+    }
+}
+
+class Test {
+    render() {
         var validString = `This is a valid template string ${this.static}`;
         return React.jsx(/*
             <div>
