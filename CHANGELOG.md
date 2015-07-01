@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.1
+
+- Add support for embedded expressions (#12, #13)
+
 ## v0.2.0
 
 - Update to react-tools v0.13
