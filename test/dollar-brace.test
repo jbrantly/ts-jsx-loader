@@ -11,6 +11,17 @@ class Test {
 class Test {
     render() {
         return React.jsx(`
+            <div>
+                <span prop=${{key: 'value'}}></span>
+                <span prop=${{key: {key: 'value'}, key2: {key: 'value'}}}></span>
+            </div>
+        `);
+    }
+}
+
+class Test {
+    render() {
+        return React.jsx(`
             <div dangerouslySetInnerHTML=${{
                 __html: this.static
             }}></div>

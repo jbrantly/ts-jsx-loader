@@ -11,6 +11,17 @@ class Test {
 class Test {
     render() {
         return (
+            React.createElement("div", null, 
+                React.createElement("span", {prop: {key: 'value'}}), 
+                React.createElement("span", {prop: {key: {key: 'value'}, key2: {key: 'value'}}})
+            )
+        );
+    }
+}
+
+class Test {
+    render() {
+        return (
             React.createElement("div", {dangerouslySetInnerHTML: {
                 __html: this.static
             }})
