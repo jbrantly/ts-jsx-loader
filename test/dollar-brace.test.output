@@ -1,0 +1,30 @@
+class Test {
+    render() {
+        return (
+            React.createElement("div", null, 
+                React.createElement("span", {prop: this.static}, "More $ $$ signs ", this.static)
+            )
+        );
+    }
+}
+
+class Test {
+    render() {
+        return (
+            React.createElement("div", {dangerouslySetInnerHTML: {
+                __html: this.static
+            }})
+        );
+    }
+}
+
+class Test {
+    render() {
+        var validString = `This is a valid template string ${this.static}`;
+        return (
+            React.createElement("div", null, 
+                React.createElement("span", null, "Cost: 5$", this.static)
+            )
+        );
+    }
+}
