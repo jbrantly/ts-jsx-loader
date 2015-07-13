@@ -3,6 +3,10 @@
 Webpack loader for transforming JSX based on special syntax. Meant to be used
 with a [TypeScript loader](https://github.com/jbrantly/ts-loader) to allow using JSX with TypeScript.
 
+# Important Deprecation Note 
+
+Since [native JSX support](http://www.jbrantly.com/typescript-and-jsx/) is coming to TypeScript 1.6, I consider this project to be complete. No new features will be added. However, bugs will still be fixed prior to the release of TypeScript 1.6.
+
 ## Installation
 
 ```
